@@ -1,0 +1,61 @@
+# Ignore artifacts:
+build
+dist
+coverage
+
+# Ignore all HTML files:
+*.html
+
+# Ignore all markdown files:
+*.md
+
+# Ignore native iOS and Android files:
+ios
+android
+
+# Ignore Expo generated files:
+.expo
+.expo-shared
+
+# Ignore node modules:
+node_modules
+
+# Ignore package files:
+package-lock.json
+yarn.lock
+
+# Ignore configuration files:
+.eslintrc.js
+babel.config.js
+metro.config.js
+app.config.ts
+
+# Ignore version control files:
+.gitignore
+.git
+
+# Ignore environment files:
+.env*
+
+# Ignore asset files:
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+
+# Ignore log files:
+*.log
+
+# Ignore Xcode project files:
+*.pbxproj
+*.xcworkspacedata
+*.xcuserstate
+
+# Ignore Gradle files:
+*.gradle
+gradle.properties
+
+# Ignore other specific files:
+LICENSE
