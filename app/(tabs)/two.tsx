@@ -1,10 +1,20 @@
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useEffect } from 'react';
+import { View, Animated, StyleSheet } from 'react-native';
 
 export default function TabTwoScreen() {
+    const fadeAnim = new Animated.Value(0);
+
+    useEffect(() => {
+        Animated.timing(fadeAnim, {
+            toValue: 1,
+            duration: 2000,
+            useNativeDriver: true,
+        }).start();
+    }, []);
+
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Tab Two</Text>
-            <View style={styles.separator} />
+            <Animated.Text style={[styles.title, { opacity: fadeAnim }]}>Tab Two</Animated.Text>
         </View>
     );
 }
@@ -18,10 +28,5 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 20,
         fontWeight: 'bold',
-    },
-    separator: {
-        marginVertical: 30,
-        height: 1,
-        width: '80%',
     },
 });
